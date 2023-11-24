@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+</head>
+
+<body>
+    <header>
+        {% load static %}
+        <div>
+            <img id="logo-django" src="{% static 'images/logo.png' %}" alt="Logo" />
+            <p id="p-title">Proyecto Web (LP3) | Brian Inca</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Inicio</a>
+            </li>
+            <li>
+                <a href="/ventana1">Ventana 1</a>
+            </li>
+            <li>
+                <a href="/ventana2">Ventana 2</a>
+            </li>
+            <li>
+                <a href="/ventana3">Ventana 3</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="content">
+            <h2 class="title">Titulo de Contenido</h2>
+            {% block content %}
+            <strong>Contenido por defecto</strong>
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2022 My Website. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
