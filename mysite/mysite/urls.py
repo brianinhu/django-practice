@@ -24,4 +24,9 @@ urlpatterns = [
     path('ventana1/', views.ventana1, name='ventana1'),
     path('ventana2/', views.ventana2, name='ventana2'),
     path('ventana3/', views.ventana3, name='ventana3'),
+    path('crear-articulo/<str:titulo>/<str:contenido>/<str:publicado>',views.crear_articulo,name="crear_articulo"),
+    path('buscar-articulo', views.buscar_articulo, name="buscar_articulo"),
+    path('editar-articulo/<int:id>',views.editar_articulo,name="editar_articulo"),
+    path('listar-articulos/',views.listar_articulos,name="listar_articulos"),
+    path('eliminar-articulo/<int:id>',views.eliminar_articulo, name='eliminar_articulo')
 ]
