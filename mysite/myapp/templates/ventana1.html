@@ -7,10 +7,16 @@
 <body>
     {% extends 'layout.html' %}
     {% block title %}
-        Ventana 1
+        {{titulo}}
     {% endblock %}
     {% block content %}
-        <h1>Este es el h1 de la ventana 1</h1>
+        <h1 class="title">Bienvenidos</h1>
+        {{autor_saludo}}
+        {% load filters %}
+        {{"Iniciando curso de LP3 en la UNTELS"|saludo|safe}}
+        <p>
+            {{ block.super }}
+        </p>
     {% endblock %}
 </body>
 </html>

@@ -23,16 +23,16 @@
     <nav>
         <ul>
             <li>
-                <a href="/">Inicio</a>
+                <a href="{% url 'index' %}">Inicio</a>
             </li>
             <li>
-                <a href="/ventana1">Ventana 1</a>
+                <a href="{% url 'ventana1' %}">Mensaje de saludo</a>
             </li>
             <li>
-                <a href="/ventana2">Ventana 2</a>
+                <a href="{% url 'ventana2' %}">Mostrar números [a, b]</a>
             </li>
             <li>
-                <a href="/ventana3">Ventana 3</a>
+                <a href="{% url 'ventana3' %}">Mostrar números [10, 15]</a>
             </li>
         </ul>
     </nav>
@@ -47,7 +47,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2022 My Website. All rights reserved.</p>
+        <p>UNTELS - Lenguaje de Programación III &copy; Brian Inca - {% now "d/m/Y h:m:s" %} </p>
     </footer>
 </body>
 
